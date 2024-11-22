@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <h2>Home</h2>
+        <nav>
+            <ul>
+                <li><a th:href="@{/clientes}">Clientes</a></li>
+                <li><a th:href="@{/residencias}">Residências</a></li>
+                <li><a th:href="@{/solucoes}">Soluções</a></li>
+                <li><a th:href="@{/cadastra_cliente}">Cadastrar Cliente</a></li>
+                <li><a th:href="@{/cadastra_residencia}">Cadastrar Residência</a></li>
+                <li><a th:href="@{/form_chatgpt}">ChatGPT</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

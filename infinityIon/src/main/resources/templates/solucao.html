@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes da Solução</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <h2>Detalhes da Solução</h2>
+        <div th:each="solucao : ${solucoes}">
+            <p><strong>ID:</strong> <span th:text="${solucao.ID_solucao}"></span></p>
+            <p><strong>Residência:</strong> <span th:text="${solucao.residencia.Residencia_ID}"></span></p>
+            <p><strong>Tipo:</strong> <span th:text="${solucao.Tipo}"></span></p>
+            <p><strong>Valor:</strong> <span th:text="${solucao.Valor}"></span></p>
+            <p><strong>Classificação:</strong> <span th:text="${solucao.Classificacao}"></span></p>
+            <p><strong>Durabilidade:</strong> <span th:text="${solucao.Durabilidade}"></span></p>
+            <p><strong>Custo de Instalação:</strong> <span th:text="${solucao.Custo_Instalacao}"></span></p>
+        </div>
+    </div>
+</body>
+</html>

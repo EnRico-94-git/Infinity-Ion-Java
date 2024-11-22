@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Residência</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastrar Residência</h2>
+        <form th:action="@{/residencias}" method="post">
+            <div>
+                <label for="clienteId">ID do Cliente:</label>
+                <input type="text" id="clienteId" name="clienteId" required>
+            </div>
+            <div>
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required>
+            </div>
+            <div>
+                <label for="Consumo_Energia">Consumo de Energia:</label>
+                <input type="number" step="0.01" id="Consumo_Energia" name="Consumo_Energia" required>
+            </div>
+            <div>
+                <label for="Nivel_Consumo">Nível de Consumo:</label>
+                <input type="text" id="Nivel_Consumo" name="Nivel_Consumo">
+            </div>
+            <div>
+                <label for="Area">Área:</label>
+                <input type="text" id="Area" name="Area">
+            </div>
+            <div>
+                <label for="Fonte_Energia">Fonte de Energia:</label>
+                <input type="text" id="Fonte_Energia" name="Fonte_Energia">
+            </div>
+            <div>
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

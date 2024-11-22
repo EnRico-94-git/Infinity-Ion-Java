@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes da Residência</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <h2>Detalhes da Residência</h2>
+        <div th:each="residencia : ${residencias}">
+            <p><strong>ID:</strong> <span th:text="${residencia.Residencia_ID}"></span></p>
+            <p><strong>Cliente:</strong> <span th:text="${residencia.cliente.nome}"></span></p>
+            <p><strong>CEP:</strong> <span th:text="${residencia.CEP}"></span></p>
+            <p><strong>Consumo de Energia:</strong> <span th:text="${residencia.Consumo_Energia}"></span></p>
+            <p><strong>Nível de Consumo:</strong> <span th:text="${residencia.Nivel_Consumo}"></span></p>
+            <p><strong>Área:</strong> <span th:text="${residencia.Area}"></span></p>
+            <p><strong>Fonte de Energia:</strong> <span th:text="${residencia.Fonte_Energia}"></span></p>
+        </div>
+    </div>
+</body>
+</html>
